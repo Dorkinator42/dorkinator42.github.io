@@ -2,7 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0;url=login.html" />
+  <title>Redirecting...</title>
 </head>
-<body></body>
+<body>
+<script>
+  const hash = window.location.hash;
+  if (hash && hash.includes('access_token')) {
+    window.location.href = 'https://dorkinator42.github.io/call-portal/login.html' + hash;
+  } else {
+    window.location.href = 'https://dorkinator42.github.io/call-portal/login.html';
+  }
+</script>
+</body>
 </html>
